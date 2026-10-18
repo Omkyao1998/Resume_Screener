@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Real student data must never be uploaded
+data/
+real_data/
+output/
+*.xlsx
+.streamlit/secrets.toml
