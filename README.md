@@ -105,8 +105,8 @@ More detail is in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 |---|---|---|
 | 0 | Tools set up | Done |
 | 1 | Repository, virtual environment, first commit | Done |
-| 2 | Read and clean the score sheet | In progress |
-| 3 | Read resumes and match them to students | |
+| 2 | Read and clean the score sheet | Done |
+| 3 | Read resumes and match them to students |In progress|
 | 4 | Free checks | |
 | 5 | Excel report | |
 | 6 | App screens (Streamlit) | |
