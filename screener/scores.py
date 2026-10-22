@@ -66,3 +66,18 @@ def clean_scores(df):
     df["starred"] = flags.apply(lambda row: [col for col in row.index if row[col]], axis=1)
 
     return df
+GROUPS = {
+    "maths_avg": ["cm1", "maths_ai", "prob_stats"],
+    "dsa_avg": ["fop", "dsa1", "ada"],
+    "aiml_avg": ["intro_aiml", "adv_ml", "ai_tools_business", "deep_learning"],
+    "dev_avg": ["adv_prog", "web_prog"],
+}
+
+
+def add_group_averages(df):
+    """Add maths_avg, dsa_avg, aiml_avg, dev_avg (blank marks are skipped)."""
+    df = df.copy()
+    for avg_column, subjects in GROUPS.items():
+        present = [s for s in subjects if s in df.columns]
+        df[avg_column] = df[present].mean(axis=1).round(1)
+    return df
